@@ -1,0 +1,37 @@
+{
+  "name": "-ticket-stampede",
+  "version": "1.0.0",
+  "description": "Build a highly concurrent ticket-booking system that can safely sell a limited number of tickets to thousands of simultaneous users without overselling or duplicate bookings, and prove its correctness using a load-testing client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx tsx src/run-all.ts",
+    "start:naive": "npx tsx src/seller/naive.ts",
+    "start:atomic": "npx tsx src/seller/atomic.ts",
+    "start:waitlist": "npx tsx src/seller/waitlist.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nivas002/-Ticket-Stampede.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nivas002/-Ticket-Stampede/issues"
+  },
+  "homepage": "https://github.com/Nivas002/-Ticket-Stampede#readme",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "fastify": "^5.12.5",
+    "ioredis": "^6.0.0",
+    "undici": "^8.11.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/ioredis": "^4.28.10",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
